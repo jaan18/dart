@@ -20,6 +20,6 @@ main(List<String> args) {
   int numero = int.parse(stdin.readLineSync());
 
   for (var i = 1; i <= 10; i++) {
-    print('Tu numero multiplicado es: ${numero * i}');
+    print('Tu tabla base de $numero es: $numero * $i = ${numero * i}');
   }
 }
