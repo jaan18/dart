@@ -1,11 +1,27 @@
-main(List<String> args) {
+main() {
   String nombre = 'jovani';
-  String nombre2 = mayusculas(nombre);
+  String nombre2 = capitalizar(nombre);
 
-  print(nombre);
-  print(nombre2);
+  // print(nombre);
+  // print(nombre2);
+
+  Map<String, String> personita = {'nombre': 'juan carlos'};
+
+  Map<String, String> personita2 = capitalizarMapa(personita);
+
+  print(personita);
+  print(personita2);
 }
 
-String mayusculas(String texto) {
+// booleanos, string, numeros
+String capitalizar(String texto) {
+  texto = texto.toUpperCase();
   return texto.toUpperCase();
+}
+
+Map<String, String> capitalizarMapa(Map<String, String> persona) {
+  persona = {...persona};
+
+  persona['nombre'] = persona['nombre'].toUpperCase();
+  return persona;
 }
